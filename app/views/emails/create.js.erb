@@ -1,2 +1,4 @@
-let target = document.getElementsByTagName("tbody")
+target = document.getElementsByTagName("tbody");
+console.log(target);
+
 target.insertAdjacentHTML("beforeend", "<%= j render 'new_email', email: @email %>")

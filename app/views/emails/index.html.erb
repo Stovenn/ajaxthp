@@ -3,7 +3,7 @@
 
 
 <div class="container d-flex flex-column align-items-center">
-<%= link_to  "Recevoir un mail", emails_path, method:'post', remote:true, class:'btn btn-primary btn-lg my-4'%>
+<%= link_to  "Recevoir un mail", emails_path, method:'post', remote: true, class:'btn btn-primary btn-lg my-4' %>
   <table class="border border-secondary">
     <thead class="bg-primary text-white">
       <tr>
@@ -17,6 +17,5 @@
           <td class="border border-secondary px-2" id= <%=email.id.to_s.split.unshift("e").join%>><%= link_to  email.object, email_path(email), class:'text-dark', :remote => true %></td>
           <td class="border border-secondary px-2 closed"><%= %></td>
         </tr>
-      <% end %> 
     </tbody>
 </div>
