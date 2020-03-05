@@ -14,8 +14,9 @@
     <tbody>
       <% @emails.each do |email| %>
         <tr>
-          <td class="border border-secondary px-2" id= <%=email.id.to_s.split.unshift("e").join%>><%= link_to  email.object, email_path(email), class:'text-dark', :remote => true %></td>
+          <td class="border border-secondary px-2" id= "<%=email.id.to_s.split.unshift("e").join%>"><%= link_to  email.object, email_path(email), class:'text-dark', :remote => true %></td>
           <td class="border border-secondary px-2 closed"><%= %></td>
         </tr>
+      <% end %>
     </tbody>
 </div>
