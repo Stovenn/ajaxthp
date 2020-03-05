@@ -1,0 +1,22 @@
+<h1>Emails#index</h1>
+<p>Find me in app/views/emails/index.html.erb</p>
+
+
+<div class="container d-flex flex-column align-items-center">
+<%= link_to  "Recevoir un mail", emails_path, method:'post', remote:true, class:'btn btn-primary btn-lg my-4'%>
+  <table class="border border-secondary">
+    <thead class="bg-primary text-white">
+      <tr>
+        <th class="border border-secondary px-2">Liste des emails</th>
+        <th class="border border-secondary px-2">Email selectionne</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @emails.each do |email| %>
+        <tr>
+          <td class="border border-secondary px-2" id= <%=email.id.to_s.split.unshift("e").join%>><%= link_to  email.object, email_path(email), class:'text-dark', :remote => true %></td>
+          <td class="border border-secondary px-2 closed"><%= %></td>
+        </tr>
+      <% end %> 
+    </tbody>
+</div>

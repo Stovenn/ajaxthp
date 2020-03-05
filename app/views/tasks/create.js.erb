@@ -1,0 +1,2 @@
+let target = document.querySelector("#<%= @task.category.title.split.join.downcase %> + .card ul")
+target.insertAdjacentHTML("beforeend", "<%= j render 'new_task', task: @task %>")

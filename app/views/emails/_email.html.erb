@@ -1,0 +1,5 @@
+<div class="container">
+  <h2 class="font-weigth-bold"><%= @email.object %></h1>
+    <p><%= @email.body %></p>
+  <%= link_to "Delete task", @email, method: "delete", class:'btn btn-danger btn-sm mr-4', remote: true %><span class='btn btn-info btn-sm'>Marque non lu</span>
+</div>
